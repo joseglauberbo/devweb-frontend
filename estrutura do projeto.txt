@@ -1,0 +1,37 @@
+<Livros>
+	<LivrosLidos>
+		<Estante livroslidos={this.livros}>
+			<LivroLido livro={this.livro[i]}>
+				<Livro>
+					<h1>Capa</h1>
+					<img />
+					<h1>Título</h1>
+					xpto xpto
+					<h1>Descrição</h1>
+					Algo algo algo
+					<h1>Autor</h1>
+				</Livro>
+				<RecomendacaoLivro livro={this.livro[i]}>
+					Texto de recomendação
+				</RecomendacaoLivro>
+			</LivroLido>
+		</Estante>
+	</LivrosLidos>
+	<LivrosNLidos >
+		<Estante livrosNlidos={this.livros}>
+			<LivroNLido livro={this.livro[i]}>
+				<Livro>
+					<h1>Capa</h1>
+					<img />
+					<h1>Título</h1>
+					xpto xpto
+					<h1>Descrição</h1>
+					Algo algo algo
+					<h1>Autor</h1>
+				</Livro>
+			</LivroNLido>
+		</Estante>
+	<LivrosNLidos />
+		...
+	<LivrosDesejados />
+</Livros>
