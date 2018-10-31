@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import LivrosLidos from './LivrosLidos';
-import LivrosNãoLidos from './LivrosNãoLidos';
-import LivrosDesejados from './LivrosDesejados';
-import NavBar from './NavBar';
+import LivrosLidos from '../livrosLidos/LivrosLidos';
+import LivrosNaoLidos from '../livrosNaoLidos/LivrosNaoLidos';
+import LivrosDesejados from '../livrosDesejados/LivrosDesejados';
+import NavBar from '../navbar/NavBar';
+import Botoes from '../botoes/Botoes';
+
 
 class Controlador extends Component {
     render() {
