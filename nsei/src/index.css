@@ -6,6 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(https://backgroundcheckall.com/wp-content/uploads/2017/12/background-livros-9.jpg) !important;
+  background-size: cover !important;
 }
 
 code {

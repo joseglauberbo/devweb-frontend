@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import React, { Component, Fragment } from 'react'
-import { Button, Card, Divider, Image, Placeholder, Container } from 'semantic-ui-react'
+import { Button, Card, Divider, Image, Placeholder, Container, Header } from 'semantic-ui-react'
 
 const cards = [
   {
@@ -20,7 +20,7 @@ const cards = [
   },
 ]
 
-export default class PlaceholderExampleCard extends Component {
+class CardLivros extends Component {
   state = { loading: false }
 
   handleLoadingClick = () => {
@@ -37,7 +37,7 @@ export default class PlaceholderExampleCard extends Component {
     return (
       <Container>
       <Fragment>
-        <Divider />
+
         <Card.Group doubling itemsPerRow={3} stackable>
           {_.map(cards, card => (
             <Button >
@@ -79,3 +79,5 @@ export default class PlaceholderExampleCard extends Component {
     )
   }
 }
+
+export default CardLivros;
