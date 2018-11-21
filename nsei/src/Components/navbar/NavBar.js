@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Segment, Icon, Input, Button } from 'semantic-ui-react'
 
-export default class MenuExampleMenus extends Component {
-  state = {}
+class NavBar extends Component {
+  state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -10,25 +10,29 @@ export default class MenuExampleMenus extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu>
-        <Menu.Item name='browse' active={activeItem === 'browse'} onClick={this.handleItemClick}>
-          Browse
-        </Menu.Item>
-
-        <Menu.Item name='submit' active={activeItem === 'submit'} onClick={this.handleItemClick}>
-          Submit
-        </Menu.Item>
-
-        <Menu.Menu position='right'>
-          <Menu.Item name='signup' active={activeItem === 'signup'} onClick={this.handleItemClick}>
-            Sign Up
+      <Segment inverted>
+        <Menu inverted pointing secondary>
+          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+          <Menu.Item
+            name='messages'
+            active={activeItem === 'messages'}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item
+            name='friends'
+            active={activeItem === 'friends'}
+            onClick={this.handleItemClick}
+          />
+          <Menu.Item position='left'>
+            <Input icon={{ name: 'search', circular: true, link: true }} placeholder='Search...' />
           </Menu.Item>
-
-          <Menu.Item name='help' active={activeItem === 'help'} onClick={this.handleItemClick}>
-            Help
+          <Menu.Item onClick={this.handleItemClick} position='right'>
+            <Icon name ='user'/>
           </Menu.Item>
-        </Menu.Menu>
-      </Menu>
+        </Menu>
+      </Segment>
     )
   }
 }
+
+export default NavBar;

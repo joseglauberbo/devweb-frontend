@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Code from './Code';
 import NavBar from './Components/navbar/NavBar';
+import CardsLivros from './Components/cardsLivros/CardsLivros';
 
 class App extends Component {
   render() {
     return (
-      <NavBar />
+      <div>
+        <NavBar />
+        <CardsLivros />
+      </div>
     );
   }
 }
