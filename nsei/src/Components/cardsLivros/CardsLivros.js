@@ -1,24 +1,43 @@
 import _ from 'lodash'
 import React, { Component, Fragment } from 'react'
-import { Button, Card, Image, Container } from 'semantic-ui-react'
+import { Button, Card, Image, Container, Dimmer, Header, Icon } from 'semantic-ui-react'
 
 const cards = [
   {
-    "image": 'http://www.melhoramigo.dog/wp-content/uploads/2016/01/cachorros-com-seus-livros-20.jpg',
-    "header": 'Livros Lidos',
-    "description": 'Seus livros que já foram lidos',
+    "image": 'https://images-na.ssl-images-amazon.com/images/I/91h3FyuOJZL.jpg',
+    "header": 'A menina que roubava livros',
+    "description": 'Drama',
   },
   {
-    "image": 'http://cdn.wp.clicrbs.com.br/espacopet/files/2014/11/cachorro-lendo.jpg',
-    "header": 'Livros Não lidos',
-    "description": 'Os livros que você têm, mas ainda não leu',
+    "image": 'https://images-na.ssl-images-amazon.com/images/I/A1F94zuyjHL.jpg',
+    "header": 'O diário de Anne Frank',
+    "description": 'História',
   },
   {
-    "image": 'http://noticias.r7.com/blogs/patas-ao-alto/files/2014/06/cachorro-leitura-patas-ao-alto.jpg',
-    "header": 'Livros desejados',
-    "description": 'Os livros que você deseja comprar',
+    "image": 'https://images-na.ssl-images-amazon.com/images/I/91W0FK7NL3L.jpg',
+    "header": 'O menino do pijama listrado',
+    "description": 'História',
+  },
+  {
+    "image": 'https://images-na.ssl-images-amazon.com/images/I/91bJFtVezBL.jpg',
+    "header": 'O Pequeno Príncipe',
+    "description": 'Romance',
+  },
+  {
+    "image": 'https://images-na.ssl-images-amazon.com/images/I/91GCLiRIq-L.jpg',
+    "header": 'Água para elefantes',
+    "description": 'Romance',
   },
 ]
+
+const extra = (
+  <Button animated='fade'>
+      <Button.Content visible> 
+        <Icon name ='search'/> 
+      </Button.Content>
+      <Button.Content hidden>Veja mais</Button.Content>
+  </Button>
+)
 
 class CardLivros extends Component {
 
@@ -26,24 +45,16 @@ class CardLivros extends Component {
 
     return (
       <Container>
-      <Fragment>
-        <Card.Group doubling itemsPerRow={3} stackable>
+        <Card.Group doubling itemsPerRow={5}>
           {_.map(cards, card => (
-            <Button>
-            <Card key={card.header}>
-                <Image src={card.image} />
-              <Card.Content>
-                  <Fragment>
-                    <Card.Header>{card.header}</Card.Header>
-                    <Card.Meta>{card.date}</Card.Meta>
-                    <Card.Description>{card.description}</Card.Description>
-                  </Fragment>
-              </Card.Content>
-            </Card>
-            </Button>
+            <Card
+              image={card.image}
+              header={card.header}
+              meta={card.description}
+              extra={extra}
+            />
           ))}
         </Card.Group>
-      </Fragment>
       </Container>
     )
   }
