@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Menu, Segment, Input, Icon } from 'semantic-ui-react'
+import { Menu, Segment, Input, Icon, Tab } from 'semantic-ui-react'
+import MeusLivrosLidos from '../meusLivrosLidos/MeusLivrosLidos'
 
 class NavBar extends Component {
   state = { activeItem: 'home' }
@@ -9,9 +10,14 @@ class NavBar extends Component {
   render() {
     const { activeItem } = this.state
 
+    const panes = [
+      { menuItem: 'Livros lidos', render: () => <Tab.Pane className='meusLivrosLidos' attached={true}><MeusLivrosLidos /></Tab.Pane> },
+    ];
+
     return (
       <Segment inverted>
         <Menu inverted pointing secondary>
+        rgfffgrrrere
           <Menu.Item name='Página inicial' 
           active={activeItem === 'Página inicial'} 
           onClick={this.handleItemClick}  />
@@ -19,6 +25,7 @@ class NavBar extends Component {
             name='Livros lidos'
             active={activeItem === 'Livros lidos'}
             onClick={this.handleItemClick}
+            panes={panes} />
           />
           <Menu.Item
             name='Livros não lidos'
