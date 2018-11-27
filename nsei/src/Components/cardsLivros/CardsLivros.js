@@ -1,6 +1,7 @@
 import _ from 'lodash'
-import React, { Component, Fragment } from 'react'
-import { Button, Card, Image, Container, Dimmer, Header, Icon } from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Card, Container } from 'semantic-ui-react'
+import BotaoCards from "../botoes/BotaoCards"
 
 const cards = [
   {
@@ -31,12 +32,10 @@ const cards = [
 ]
 
 const extra = (
-  <Button animated='fade'>
-      <Button.Content visible> 
-        <Icon name ='search'/> 
-      </Button.Content>
-      <Button.Content hidden>Veja mais</Button.Content>
-  </Button>
+  <BotaoCards>
+
+  </BotaoCards>
+
 )
 
 class CardLivros extends Component {
