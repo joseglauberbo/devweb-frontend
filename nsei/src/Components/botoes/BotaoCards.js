@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Icon, Label } from 'semantic-ui-react'
+import { NavLink } from "react-router-dom";
 
 class BotaoCards extends Component {
 
@@ -7,7 +8,7 @@ class BotaoCards extends Component {
 
         return (
             <div>
-                <Button animated='vertical' color='black' >
+                <Button animated='vertical' color='black' as={NavLink} to='/book' >
                     <Button.Content hidden>Veja mais</Button.Content>
                     <Button.Content visible>
                         <Icon name='search plus' />

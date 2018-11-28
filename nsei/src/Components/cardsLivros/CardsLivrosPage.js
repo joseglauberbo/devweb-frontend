@@ -2,17 +2,23 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { Card, Container } from 'semantic-ui-react'
 import BotaoCards from "../botoes/BotaoCards"
-import NavBarHome from "../navbar/NavBarHome"
+import NavBar from "../navbar/NavBar"
 
+const extra = (
+  <BotaoCards>
 
-class CardLivrosHome extends Component {
+  </BotaoCards>
+
+)
+
+class CardLivrosPage extends Component {
 
   render() {
 
     return (
-      <div>
-      <NavBarHome handleChange={this.props.handleChange}>
-      </NavBarHome>
+     <div> 
+      <NavBar handleChange={this.props.handleChange}>
+      </NavBar>
       <Container>
         <Card.Group doubling itemsPerRow={5}>
           {_.map(this.props.livros, card => (
@@ -20,6 +26,7 @@ class CardLivrosHome extends Component {
               image={card.image}
               header={card.header}
               meta={card.description}
+              extra={extra}
             />
           ))}
         </Card.Group>
@@ -29,4 +36,4 @@ class CardLivrosHome extends Component {
   }
 }
 
-export default CardLivrosHome;
+export default CardLivrosPage;

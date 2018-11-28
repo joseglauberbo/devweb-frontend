@@ -3,6 +3,7 @@ import { Menu, Segment, Input, Icon } from 'semantic-ui-react'
 import MeusLivrosLidos from '../meusLivrosLidos/MeusLivrosLidos'
 import InputLoading from '../input/InputLoading'
 import DropdownTrigger from '../dropdown/DropdownTrigger'
+import { NavLink } from "react-router-dom";
 
 class NavBar extends Component {
   state = { activeItem: 'home' }
@@ -15,7 +16,9 @@ class NavBar extends Component {
     return (
       <Segment inverted>
         <Menu inverted pointing secondary>
-          <Menu.Item name='Página inicial' 
+          <Menu.Item  
+          as={NavLink} to='/page'
+          name='Página inicial'
           active={activeItem === 'Página inicial'} 
           onClick={this.handleItemClick}  />
           <Menu.Item
@@ -30,13 +33,16 @@ class NavBar extends Component {
           />
            <Menu.Item
             name='Livros desejados'
-            active={activeItem === 'Livros não lidos'}
+            active={activeItem === 'Livros desejados'}
             onClick={this.handleItemClick}
           />
-         <InputLoading>
-         </InputLoading>
+          <InputLoading handleChange={this.props.handleChange}>
+          </InputLoading>
+          <Menu.Item position="right">
           <DropdownTrigger>
           </DropdownTrigger>
+          </Menu.Item>
+          
         </Menu>
       </Segment>
     )
