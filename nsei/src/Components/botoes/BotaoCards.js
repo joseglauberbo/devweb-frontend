@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { Button, Icon, Label } from 'semantic-ui-react'
+import { Button, Icon } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
 class BotaoCards extends Component {
 
     render() {
-
         return (
             <div>
                 <Button animated='vertical' color='black' as={NavLink} to='/book' >

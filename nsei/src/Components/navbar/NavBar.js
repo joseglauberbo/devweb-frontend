@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Segment, Input, Icon } from 'semantic-ui-react'
-import MeusLivrosLidos from '../meusLivrosLidos/MeusLivrosLidos'
+import { Menu, Segment } from 'semantic-ui-react'
 import InputLoading from '../input/InputLoading'
 import DropdownTrigger from '../dropdown/DropdownTrigger'
 import { NavLink } from "react-router-dom";

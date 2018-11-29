@@ -1,12 +1,13 @@
 import React from 'react'
 import { Button } from 'semantic-ui-react'
+import { NavLink } from "react-router-dom";
 
-const ButtonExampleConditionalsCustom = () => (
+const botoesNavBarHome = () => (
   <Button.Group>
-    <Button>sign in</Button>
+    <Button as={NavLink} to="/page">sign in</Button>
     <Button.Or text='ou' />
     <Button positive>sign up</Button>
   </Button.Group>
 )
 
-export default ButtonExampleConditionalsCustom
+export default botoesNavBarHome
