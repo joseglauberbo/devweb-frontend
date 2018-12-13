@@ -5,6 +5,7 @@ import CardsLivros from '../Components/cardsLivros/CardsLivros';
 import CardsLivrosPage from '../Components/cardsLivros/CardsLivrosPage';
 import BookInfo from '../Components/bookInfo/BookInfo';
 import Login from '../Components/login/Login';
+import axios from 'axios';
 import { Route, HashRouter } from "react-router-dom";
 
 
@@ -36,6 +37,8 @@ let listaLivros = [
   },
 ]
 
+let bdLivros = []
+
 class App extends Component {
 
   constructor(props) {
@@ -47,6 +50,14 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
   };
 
+  componentDidMount () {
+    axios.get('http://localhost:3001/livros')
+    .then(res => {
+      bdLivros = res.data;
+      const livros = listaLivros.concat(bdLivros);
+      this.setState({livros})
+    });
+  };
   handleChange = event => {
     const input = event.target.value.toLowerCase();
     this.setState(currentState => {

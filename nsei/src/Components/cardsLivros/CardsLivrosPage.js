@@ -2,6 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { Card, Container } from 'semantic-ui-react'
 import BotaoCards from "../botoes/BotaoCards"
+import Book from "../book/novoLivro"
 
 const extra = (
   <BotaoCards>
@@ -27,6 +28,10 @@ class CardLivrosPage extends Component {
             />
           ))}
         </Card.Group>
+        <br>
+        </br>
+        <Book>
+        </Book>
       </Container>
       </div>
     )

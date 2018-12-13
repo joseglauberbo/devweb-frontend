@@ -27,7 +27,7 @@ const Login = () => (
               type='password'
             />
 
-            <Button color='black' fluid size='large' as={NavLink} to='/user'>
+            <Button color='black' fluid size='large' as={NavLink} to='/page'>
               Login
             </Button>
           </Segment>

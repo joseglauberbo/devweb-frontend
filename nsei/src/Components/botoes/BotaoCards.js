@@ -6,7 +6,7 @@ class BotaoCards extends Component {
 
     render() {
         return (
-            <div>
+            <div class="button-livro center">
                 <Button animated='vertical' color='black' as={NavLink} to='/book' >
                     <Button.Content hidden>Veja mais</Button.Content>
                     <Button.Content visible>
