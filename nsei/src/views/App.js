@@ -11,29 +11,38 @@ import { Route, HashRouter } from "react-router-dom";
 
 let listaLivros = [
   {
-    "image": 'https://images-na.ssl-images-amazon.com/images/I/91h3FyuOJZL.jpg',
-    "header": 'A menina que roubava livros',
-    "description": 'Drama',
+    "nome": 'A menina que roubava livros',
+    "descricao": 'é uma historia de uma bela garota q rouba livros',
+    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/91h3FyuOJZL.jpg',
+    "genero": 'Drama'
   },
   {
-    "image": 'https://images-na.ssl-images-amazon.com/images/I/71e0bxVb%2B%2BL.jpg',
-    "header": 'O diário de Anne Frank',
-    "description": 'História',
+    "nome": 'O diário de Anne Frank',
+    "descricao": 'nunca li',
+    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/71e0bxVb%2B%2BL.jpg',
+    "genero": 'historia'
+    
   },
   {
-    "image": 'https://images-na.ssl-images-amazon.com/images/I/91W0FK7NL3L.jpg',
-    "header": 'O menino do pijama listrado',
-    "description": 'História',
+    "nome": 'O menino do pijama listrado',
+    "descricao": 'é uma historia mt triste de um menino q morre',
+    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/91W0FK7NL3L.jpg',
+    "genero": 'tristeza'
+    
   },
   {
-    "image": 'https://images-na.ssl-images-amazon.com/images/I/91bJFtVezBL.jpg',
-    "header": 'O Pequeno Príncipe',
-    "description": 'Romance',
+    "nome": 'O Pequeno Príncipe',
+    "descricao": 'é lindinho',
+    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/91bJFtVezBL.jpg',
+    "genero": 'lindinho'
+  
   },
   {
-    "image": 'https://images-na.ssl-images-amazon.com/images/I/91GCLiRIq-L.jpg',
-    "header": 'Água para elefantes',
-    "description": 'Romance',
+    "nome": 'Água para elefantes',
+    "descricao": 'ai eu amei',
+    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/91GCLiRIq-L.jpg',
+    "genero": 'romance'
+
   },
 ]
 

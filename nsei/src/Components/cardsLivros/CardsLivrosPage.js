@@ -19,13 +19,10 @@ class CardLivrosPage extends Component {
      <div> 
       <Container>
         <Card.Group doubling itemsPerRow={5}>
-          {_.map(this.props.livros, card => (
-            <Card
-              image={card.image}
-              header={card.header}
-              meta={card.description}
-              extra={extra}
-            />
+          {_.map(this.props.livros, livro => (
+            <Card>
+              <Card.Header>{livro.imagem}</Card.Header>
+            </Card>
           ))}
         </Card.Group>
         <br>
