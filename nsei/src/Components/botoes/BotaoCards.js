@@ -7,12 +7,12 @@ class BotaoCards extends Component {
     render() {
         return (
             <div class="button-livro center">
-                <Button animated='vertical' color='black' as={NavLink} to='/book' >
-                    <Button.Content hidden>Veja mais</Button.Content>
+            <Button animated='vertical' color='black' fluid  as={NavLink} to='/book' size='large'>
+                <Button.Content hidden>Veja mais</Button.Content>
                     <Button.Content visible>
                         <Icon name='search plus' />
                     </Button.Content>
-                </Button>
+            </Button>
             </div>
         )
     }

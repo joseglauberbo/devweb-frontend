@@ -60,11 +60,9 @@ class FormLivro extends Component {
                     <input required placeholder="Coloque o link aqui" name="imagem" onChange={this.imagemChange} />
                 </Form.Field>
                 <div class="form-anuncio-button center">
-                <Button.Group>
-                        <Button type="submit" positive>Adicionar lIVRO</Button>
-                        <Button.Or text='ou' />
-                        <Button negative content='Cancelar' onClick={this.props.close}></Button>
-                    </Button.Group>
+                <Button color='black' fluid size='large'>
+                    Adicionar livro
+                </Button>
                 </div>
             </Form>
         );

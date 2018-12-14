@@ -21,7 +21,7 @@ class novoLivro extends Component {
 
     return (
         <div>
-        <Button fluid  color='white' onClick={this.show('blurring')}>Adicionar novo livro</Button>
+        <Button fluid  color='black' onClick={this.show('blurring')}>Adicionar novo livro</Button>
         <Modal dimmer={dimmer} open={open} onClose={this.close}>
             <Modal.Header>Novo Livro</Modal.Header>
             <Modal.Content>
