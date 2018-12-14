@@ -42,7 +42,7 @@ let bdLivros = []
 class App extends Component {
 
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       livros: [...listaLivros],
       loggedIn: true
@@ -58,10 +58,11 @@ class App extends Component {
       this.setState({livros})
     });
   };
+
   handleChange = event => {
     const input = event.target.value.toLowerCase();
     this.setState(currentState => {
-      return { livros: listaLivros.filter(livro => livro.header.toLowerCase().includes(input)) }
+      return { livros: listaLivros.filter(livro => livro.nome.toLowerCase().includes(input)) }
     });
   }
 

@@ -18,27 +18,26 @@ class FormLivro extends Component {
     descricaoChange = event => {
         this.setState({ descricao: event.target.value });
     }
-    generoChange = event => {
+    imagemChange = event => {
         this.setState({ imagem: event.target.value });
     }
-    imagemChange = event => {
-        this.setState({ usuario: event.target.value });
+    generoChange = event => {
+        this.setState({ genero: event.target.value });
     }
-
+    
     handleSubmit = event => {
-
         event.preventDefault();
 
         const livro = {
             "nome": this.state.nome,
             "descricao": this.state.descricao,
-            "genero": this.state.genero,
-            "imagem": this.state.imagem
+            "imagem": this.state.imagem,
+            "genero": this.state.genero
         };
         
-        axios.post("http://localhost:3001/livros/", livro);
+        axios.post("http://localhost:3001/livros", livro);
         this.props.close();
-        window.location.reload();
+        //window.location.reload();
     }
 
     render() {
@@ -61,7 +60,7 @@ class FormLivro extends Component {
                 </Form.Field>
                 <div class="form-anuncio-button center">
                 <Button color='black' fluid size='large'>
-                    Adicionar livro
+                    Login
                 </Button>
                 </div>
             </Form>
