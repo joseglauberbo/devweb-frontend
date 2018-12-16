@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import NavBar from '../Components/navbar/NavBar';
-import CardsLivros from '../Components/cardsLivros/CardsLivros';
 import CardsLivrosPage from '../Components/cardsLivros/CardsLivrosPage';
 import BookInfo from '../Components/bookInfo/BookInfo';
+import Cadastro from '../Components/cadastro/Cadastro';
 import Login from '../Components/login/Login';
 import axios from 'axios';
 import { Route, HashRouter } from "react-router-dom";
@@ -94,9 +94,9 @@ class App extends Component {
           <div>
           <NavBar handleChange={this.handleChange}> </NavBar>
           <Route exact path="/" component={(props) => <Login {...props} livros={this.state.livros} />} />
-          <Route exact path="/user" component={(props) => <CardsLivros {...props} livros={this.state.livros} />} />
           <Route exact path="/page" component={(props) => <CardsLivrosPage {...props} livros={this.state.livros} />} />
           <Route exact path="/book" component={(props) => <BookInfo {...props} livros={this.state.livros} />} />
+          <Route exact path="/cadastro" component={(props) => <Cadastro {...props} livros={this.state.livros} />} />
           </div>
       </HashRouter>
     );

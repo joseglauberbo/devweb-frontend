@@ -15,7 +15,6 @@ class FormLivro extends Component {
         }
     }
     
-
     nomeChange = event => {
         this.setState({ nome: event.target.value });
     }
@@ -64,7 +63,7 @@ class FormLivro extends Component {
                 </Form.Field>
                 <div class="form-anuncio-button center">
                     <Button color='black' fluid size='large'>
-                        Login
+                        Adicionar livro
                     </Button>
                 </div>
             </Form>

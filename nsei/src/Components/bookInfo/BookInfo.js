@@ -1,24 +1,42 @@
-import React from 'react'
-import { Grid, Placeholder, Segment, Container } from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Container, Header, Segment, Image, Grid, Divider, Table, Icon } from 'semantic-ui-react'
 
-const PlaceholderExampleGrid = () => (
-    <Container>
-  <Grid stackable>
-    <Grid.Column>
-      <Segment raised>
-        <Placeholder>
-          <Placeholder.Header image>
-            <Placeholder.Line />
-            <Placeholder.Line />
-          </Placeholder.Header>
-          <Placeholder.Paragraph>
-            <Placeholder.Line length='medium' />
-            <Placeholder.Line length='short' />
-          </Placeholder.Paragraph>
-        </Placeholder>
-      </Segment>
-    </Grid.Column>
-    </Grid>
-    </Container>
-)
-export default PlaceholderExampleGrid;
+class BookInfo extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+  
+    return (
+      <Container>
+        <Header as='h3' textAlign='center'>
+          {this.props.livro.nome}
+        </Header>
+        <Segment>
+          <Grid columns={2} relaxed='very'>
+            <Grid.Column>
+              <p>
+                <Image src={this.props.livro.imagem} />
+              </p>
+            </Grid.Column>
+            <Grid.Column>
+              <Divider horizontal>
+                <Header as='h4'>
+                  <Icon name='tag' />
+                  Descrição do que o usuário achou do livro
+                </Header>
+              </Divider>
+              <p>
+                {this.props.livro.descricao}
+              </p>
+            </Grid.Column>
+          </Grid>
+        </Segment>
+      </Container>
+    )
+  }
+}
+
+export default BookInfo;

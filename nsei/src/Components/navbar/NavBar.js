@@ -17,14 +17,10 @@ class NavBar extends Component {
         <Menu inverted pointing secondary>
           <Menu.Item  
           as={NavLink} to='/page'
-          name='Página inicial'
+          name='Livros Lidos'
           active={activeItem === 'Página inicial'} 
           onClick={this.handleItemClick}  />
-          <Menu.Item
-            name='Livros lidos'
-            active={activeItem === 'Livros lidos'}
-            onClick={this.handleItemClick}
-            />
+
           <Menu.Item
             name='Livros não lidos'
             active={activeItem === 'Livros não lidos'}

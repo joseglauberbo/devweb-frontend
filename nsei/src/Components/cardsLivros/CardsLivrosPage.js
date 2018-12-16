@@ -1,16 +1,10 @@
 import _ from 'lodash'
-import React, { Component } from 'react'
-import { Card, Container } from 'semantic-ui-react'
+import React, { Component, Fragment } from 'react'
+import { Card, Container, Image } from 'semantic-ui-react'
 import BotaoCards from "../botoes/BotaoCards"
 import Book from "../book/novoLivro"
 
-const extra = (
-  <BotaoCards>
-
-  </BotaoCards>
-
-)
-
+  
 class CardLivrosPage extends Component {
 
   render() {
@@ -20,12 +14,18 @@ class CardLivrosPage extends Component {
       <Container>
         <Card.Group doubling itemsPerRow={5}>
           {_.map(this.props.livros, livro => (
-            <Card
-            image={livro.imagem}
-            header={livro.nome}
-            meta={livro.descricao}
-            extra={extra}
-          />
+            <Card>
+              <Image src={livro.imagem} />
+              <Card.Content>
+                <Fragment>
+                  <Card.Header>{livro.nome}</Card.Header>
+                  <Card.Meta>{livro.genero}</Card.Meta>
+                </Fragment>
+              </Card.Content>
+              <Card.Content extra>
+                <BotaoCards livro={livro}></BotaoCards>
+              </Card.Content> 
+            </Card>
           ))}
         </Card.Group>
         <br>
