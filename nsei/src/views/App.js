@@ -11,37 +11,37 @@ import { Route, HashRouter } from "react-router-dom";
 
 let listaLivros = [
   {
-    "nome": 'A menina que roubava livros',
-    "descricao": 'é uma historia de uma bela garota q rouba livros',
-    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/91h3FyuOJZL.jpg',
-    "genero": 'Drama'
+    "nome": "A menina que roubava livros",
+    "descricao": "é uma historia de uma bela garota q rouba livros",
+    "imagem": "https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=6393010&qld=90&l=430&a=-1=1004881681",
+    "genero": "Drama"
   },
   {
-    "nome": 'O diário de Anne Frank',
-    "descricao": 'nunca li',
-    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/71e0bxVb%2B%2BL.jpg',
-    "genero": 'historia'
+    "nome": "O diário de Anne Frank",
+    "descricao": "nunca li",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/71e0bxVb%2B%2BL.jpg",
+    "genero": "historia"
     
   },
   {
-    "nome": 'O menino do pijama listrado',
-    "descricao": 'é uma historia mt triste de um menino q morre',
-    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/91W0FK7NL3L.jpg',
-    "genero": 'tristeza'
+    "nome": "O menino do pijama listrado",
+    "descricao": "é uma historia mt triste de um menino q morre",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/91W0FK7NL3L.jpg",
+    "genero": "tristeza"
     
   },
   {
-    "nome": 'O Pequeno Príncipe',
-    "descricao": 'é lindinho',
-    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/91bJFtVezBL.jpg',
-    "genero": 'lindinho'
+    "nome": "O Pequeno Príncipe",
+    "descricao": "é lindinho",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/91bJFtVezBL.jpg",
+    "genero": "lindinho"
   
   },
   {
-    "nome": 'Água para elefantes',
-    "descricao": 'ai eu amei',
-    "imagem": 'https://images-na.ssl-images-amazon.com/images/I/91GCLiRIq-L.jpg',
-    "genero": 'romance'
+    "nome": "Água para elefantes",
+    "descricao": "ai eu amei",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/91GCLiRIq-L.jpg",
+    "genero": "romance"
 
   },
 ]
@@ -54,7 +54,6 @@ class App extends Component {
     super(props);
     this.state = {
       livros: [...listaLivros],
-      loggedIn: true
     };
     this.handleChange = this.handleChange.bind(this);
   };
@@ -73,7 +72,7 @@ class App extends Component {
     this.setState(currentState => {
       return { livros: listaLivros.filter(livro => livro.nome.toLowerCase().includes(input)) }
     });
-  }
+  };
 
 
   render() {
@@ -101,12 +100,6 @@ class App extends Component {
           </div>
       </HashRouter>
     );
-  }
-
-  toggle() {
-    this.setState({
-      loggedIn: !this.state.loggedIn
-    })
   }
 }
 

@@ -5,12 +5,16 @@ import axios from 'axios'
 
 class FormLivro extends Component {
 
-    state = {
-        nome: "",
-        descricao: "",
-        imagem: "",
-        genero: ""
+    constructor(props) {
+        super(props)
+        this.state = {
+            nome: "",
+            descricao: "",
+            imagem: "",
+            genero: ""
+        }
     }
+    
 
     nomeChange = event => {
         this.setState({ nome: event.target.value });
@@ -37,7 +41,7 @@ class FormLivro extends Component {
         
         axios.post("http://localhost:3001/livros", livro);
         this.props.close();
-        //window.location.reload();
+        window.location.reload();
     }
 
     render() {
@@ -59,9 +63,9 @@ class FormLivro extends Component {
                     <input required placeholder="Coloque o link aqui" name="imagem" onChange={this.imagemChange} />
                 </Form.Field>
                 <div class="form-anuncio-button center">
-                <Button color='black' fluid size='large'>
-                    Login
-                </Button>
+                    <Button color='black' fluid size='large'>
+                        Login
+                    </Button>
                 </div>
             </Form>
         );

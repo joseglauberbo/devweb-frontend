@@ -10,11 +10,11 @@ class CardLivrosHome extends Component {
       <div>
       <Container>
         <Card.Group doubling itemsPerRow={5}>
-          {_.map(this.props.livros, card => (
+          {_.map(this.props.livros, livro => (
             <Card
-              image={card.image}
-              header={card.header}
-              meta={card.description}
+              image={livro.imagem}
+              header={livro.nome}
+              meta={livro.descricao}
             />
           ))}
         </Card.Group>
