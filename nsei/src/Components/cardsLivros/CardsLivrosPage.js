@@ -15,7 +15,7 @@ class CardLivrosPage extends Component {
         <Card.Group doubling itemsPerRow={5}>
           {_.map(this.props.livros, livro => (
             <Card>
-              <Image src={livro.imagem} />
+              <Image src={livro.imagem} fluid/>
               <Card.Content>
                 <Fragment>
                   <Card.Header>{livro.nome}</Card.Header>

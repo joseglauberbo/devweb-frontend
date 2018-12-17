@@ -70,7 +70,8 @@ class App extends Component {
   handleChange = event => {
     const input = event.target.value.toLowerCase();
     this.setState(currentState => {
-      return { livros: listaLivros.filter(livro => livro.nome.toLowerCase().includes(input)) }
+      const todosOsLivros = listaLivros.concat(bdLivros);
+      return { livros: todosOsLivros.filter(livro => livro.nome.toLowerCase().includes(input)) }
     });
   };
 
