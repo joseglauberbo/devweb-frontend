@@ -1,6 +1,6 @@
 # devweb-frontend
 
-Você tem a leitura como um passatempo? Certamente você gostará dessa aplicação! Ela irá gerenciar o que você estiver lendo, extrair informações do que já leu e lhe ajudar com o que deseja ler. 
+Você tem a leitura como um passatempo? Certamente você gostará dessa aplicação! Ela irá gerenciar o que você estiver lendo e poder mostrar para outros usuários resenhas que você criou sobre esses livros que você já leu.
 
 Motivação: O mundo dos leitores é sempre vasto e necessita de gerenciamento, e também sempre é bom sabermos, de acordo com nosso orçamento, qual o valor que aquele livro que tanto queremos está. Foi daí que surgiu essa ideia. Como leitor sempre senti a necessidade de conseguir gerenciar as minhas leituras, pois muitas vezes queria poder comentar, compartilhar e avaliar com meus amigos sobre determinado livro e possuir mais informações sobre os que tenho interesse. 
 
@@ -8,15 +8,10 @@ Obs: Este repositório é utilizado para desenvolvimento de uma aplicação na d
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-Do you have the read as a hobbie? Certainly you will like this application. It will manage what you are reading, get informations about what you read and it will help you with what do you want to read.
-
-Motivation: The readers’ world is too big and needs manage, and always is good to know, according to our budget, how many is that book that I want to read. So, this idea came. I always have seen the necessity that be able to manage my reads because a lot of times I wanted to talk, share and rate with my friends about my books and got more informations about the books that I want to read.
-
-Ps:. This repository is using for application development in principles of web development in Computer Science at UFCG.
-
---------------------------------------------------------------------------------------------------------------------------------------
-
 Para rodar o projeto:
 
 1) npm install dentro da pasta nsei;
 2) npm start dentro da pasta nsei;
+
+Para rodar o backend, siga as instruções do repositório abaixo:
+https://github.com/joseglauberbo/devweb-backend
