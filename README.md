@@ -15,3 +15,5 @@ Para rodar o projeto:
 
 Para rodar o backend, siga as instruções do repositório abaixo:
 https://github.com/joseglauberbo/devweb-backend
+
+(Observação: alguns dados estão mockados, para que pudesse se ter uma visualização melhor do site, porém você pode adicionar os livros que quiser e visualizar eles na sua página inicial!)
