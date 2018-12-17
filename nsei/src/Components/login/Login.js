@@ -20,6 +20,8 @@ class Login extends Component {
     var res = response.data;
     localStorage.setItem('userID', res.usuarioId);
     localStorage.setItem("token", res.token);
+    console.log(res.usuarioId)
+    console.log(res.token)
   }
 
   emailChange = event => {
@@ -29,12 +31,13 @@ class Login extends Component {
     this.setState({ password: event.target.value });
   }
   loginConfirmado = () => {
-    this.props.history.push('/page')
+    window.location.reload();
+    this.props.history.push('/')
   }
 
   loginNegado = (erro) => this.setState({ erro: true, mensagemErro: "E-mail ou senha incorretos." })
+  
   voltar = () => this.setState({ erro: false })
-
 
   handleSubmit = event => {
     event.preventDefault();
@@ -42,7 +45,8 @@ class Login extends Component {
       "email": this.state.email,
       "password": this.state.password,
     };
-    axios.post("http://localhost:3001/authentication/", user).then(result => {
+   
+    axios.post("http://localhost:3001/authentication", user).then(result => {
       this.salvarToken(result)
       this.loginConfirmado()
     }, error => {
